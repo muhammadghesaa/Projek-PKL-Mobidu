@@ -14,10 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-            $table->increments('id_projek');
-            $table->string('nama');
-            $table->unsignedInteger('kode_category')->nullable();
-            $table->enum('sts_projek', ['Tugas baru', 'Sedang dikerjakan', 'Dites', 'Selesai']);
+            $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->enum('status', ['pending', 'on_progres', 'done']);
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->foreignId('manager_id');
+            $table->foreignId('users_id'); 
             $table->timestamps();
         });
     }

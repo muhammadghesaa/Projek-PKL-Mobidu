@@ -2,6 +2,9 @@
 
 @section('main')
 
-<h1>helllo world</h1>
-    
+<h1>
+    Hai ,Welcome To
+    “Manage Employe”
+    Lets Manage Ur Employe!</h1>
+<p><img src="img/orang.jpg.png" alt="orang"></p>
 @endsection
